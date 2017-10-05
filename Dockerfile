@@ -1,4 +1,4 @@
-FROM node:8-slim
+FROM node:8
 
 # Install latest chrome dev package.
 # Note: this installs the necessary libs to make the bundled version of Chromium that Pupppeteer
