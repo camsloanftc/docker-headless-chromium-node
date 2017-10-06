@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y wget --no-install-recommends \
 RUN yarn add puppeteer
 
 # Install reg-suit so it's available in the container.
-RUN sudo npm install reg-suit -g
+RUN npm install reg-suit -g
 
 # Add pptr user.
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
