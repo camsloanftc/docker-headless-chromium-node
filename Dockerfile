@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:8.9.4
 
 # Install latest chrome dev package.
 # Note: this installs the necessary libs to make the bundled version of Chromium that Pupppeteer
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y wget --no-install-recommends \
     && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
     && apt-get update \
     && apt-get install -y google-chrome-unstable \
-      --no-install-recommends \
+    --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge --auto-remove -y curl \
     && rm -rf /src/*.deb
